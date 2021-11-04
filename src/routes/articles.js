@@ -43,11 +43,13 @@ router.post('/api/articulos', (request,response) => {
     stock
   },
     sql = 'INSERT INTO articles SET ?'
-  db_conection.query(sql, data, (error, results) => {
+  db_conection.query(sql, data, (error, result) => {
     if (error) {
       throw error
     } else {
-      response.send(results)
+      // response.send(result)
+      Object.assign(data, { id: result.insertId }) // Add id to the data object
+      response.send(data) // Send values
     }
   })
 })
