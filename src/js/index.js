@@ -37,20 +37,6 @@ d.addEventListener('click', (e) => {
 	}
 })
 
-// // Add event the form
-// $form.addEventListener('submit', (e) => {
-// 	e.preventDefault()
-//   console.log('hiciste clic');
-// 	if (option === 'create') {
-// 		console.log('Vamos a crear un articulo')
-// 	}
-// 	if (option === 'edit') {
-// 		console.log('Vamos a editar un articulo')
-// 	}
-// 	// Close modal
-// 	$modalArticle.hide()
-// })
-
 // Add event submit a document
 d.addEventListener('submit', (e) => {
 	if (e.target.matches('form')) {
